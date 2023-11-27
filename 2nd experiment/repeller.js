@@ -2,7 +2,7 @@ class Repeller {
   constructor(x, y) {
     this.position = createVector(x, y);
     //{!1} How strong is the repeller?
-    this.power = 100;
+    this.power = 600;
   }
 
   show() {
