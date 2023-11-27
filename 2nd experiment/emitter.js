@@ -34,7 +34,7 @@ class Emitter {
 
   applyClassifior(classifior) {
     for (let particle of this.particles) {
-      let force = classifior.attract(particle);
+      let force = classifior.classify(particle);
       particle.applyForce(force);
     }
   }

@@ -32,6 +32,9 @@ function draw() {
   //{!1} Applying the repeller
   emitter.applyRepeller(repeller);
   emitter.applyAttractor(attractor);
+  emitter.applyClassifior(classifior);
+  emitter.applyClassifior(classifior1);
+  emitter.applyClassifior(classifior2);
   emitter.run();
 
   repeller.show();
