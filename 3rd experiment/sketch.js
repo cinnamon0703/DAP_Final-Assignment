@@ -16,7 +16,7 @@ function draw() {
   background(255);
     
   repeller.setPower(mouseX);
-  let randomSpeed = random(-1,1);
+  let randomSpeed = random(-1,5);
   repeller.move(randomSpeed);
   
   emitter.addParticle();
