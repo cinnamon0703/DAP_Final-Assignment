@@ -2,7 +2,7 @@ class Classifior {
     constructor(x, y) {
       this.position = createVector(x, y);
     
-      this.power = 2000;
+      this.power = 200;
     }
   
     show() {
