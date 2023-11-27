@@ -6,20 +6,20 @@ let repeller;
 
 let attractor;
 
-let attractor1;
+let classifior;
 
-let attractor2;
+let classifior1;
 
-let attractor3;
+let classifior2;
 
 function setup() {
   createCanvas(2000, 1000);
   emitter = new Emitter(width / 2, 20);
   repeller = new Repeller(width / 2, 300);
   attractor = new Attractor(width/2, 100);
-  attractor1 = new Attractor(500, 600);
-  attractor2 = new Attractor(1000, 600);
-  attractor3 = new Attractor(1500, 600);
+  classifior = new Classifior(500, 600);
+  classifior1= new Classifior(1000, 600);
+  classifior2 = new Classifior(1500, 600);
 
 }
 
@@ -36,7 +36,7 @@ function draw() {
 
   repeller.show();
   attractor.show();
-  attractor1.show();
-  attractor2.show();
-  attractor3.show();
+  classifior.show();
+  classifior1.show();
+  classifior2.show();
 }

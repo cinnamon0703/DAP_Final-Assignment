@@ -32,6 +32,13 @@ class Emitter {
     }
   }
 
+  applyClassifior(classifior) {
+    for (let particle of this.particles) {
+      let force = classifior.attract(particle);
+      particle.applyForce(force);
+    }
+  }
+
   run() {
     for (let i = this.particles.length - 1; i >= 0; i--) {
       const particle = this.particles[i];
