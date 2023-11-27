@@ -2,7 +2,7 @@ class Attractor {
     constructor(x, y) {
       this.position = createVector(x, y);
     
-      this.power = 250;
+      this.power = 150;
     }
   
     show() {
