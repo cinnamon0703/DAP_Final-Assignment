@@ -9,9 +9,9 @@ let attractor;
 
 function setup() {
   createCanvas(2000, 1000);
-  emitter = new Emitter(width / 2, 20);
-  repeller = new Repeller(width / 2, 200);
-  attractor = new Attractor(width/2, 150);
+  emitter = new Emitter(width / 2, 50);
+  repeller = new Repeller(width / 2, 150);
+  attractor = new Attractor(width/2, 200);
  
 
 }
