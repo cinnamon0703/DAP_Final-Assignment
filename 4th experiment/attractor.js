@@ -9,7 +9,7 @@ class Attractor {
       stroke(0);
       strokeWeight(2);
       fill(255,0,0);
-      circle(this.position.x, this.position.y, 32);
+      circle(this.position.x, this.position.y, 10);
     }
   
     attract(particle) {
