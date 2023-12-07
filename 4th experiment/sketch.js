@@ -43,9 +43,9 @@ function setup() {
 function draw() {
   background(255);
 
-  attractor.setPower(params.attractorValue);
+  attractor.setPower(params.testValue);
 
-  for (let i = 0; i < params. particleAmount; i++) {
+  for (let i = 0; i < params.testAmount; i++) {
     emitter.addParticle(params.tColor);
   }
   let gravity = createVector(0, 0.1);

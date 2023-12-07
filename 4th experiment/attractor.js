@@ -4,6 +4,10 @@ class Attractor {
     
       this.power = 600;
     }
+
+    setPower(value) {
+      this.power =value;
+    }
   
     show() {
       stroke(0);
