@@ -6,8 +6,10 @@ class Emitter {
     this.particles = [];
   }
 
-  addParticle() {
-    this.particles.push(new Particle(this.origin.x, this.origin.y));
+  addParticle(aColor) {
+    let p = new Particle(this.origin.x, this.origin.y);
+    p.c = color(aColor);
+    this.particles.push(p);
   }
 
   applyForce(force) {
@@ -28,13 +30,6 @@ class Emitter {
   applyAttractor(attractor) {
     for (let particle of this.particles) {
       let force = attractor.attract(particle);
-      particle.applyForce(force);
-    }
-  }
-
-  applyClassifior(classifior) {
-    for (let particle of this.particles) {
-      let force = classifior.classify(particle);
       particle.applyForce(force);
     }
   }
