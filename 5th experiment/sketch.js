@@ -1,8 +1,13 @@
-// One ParticleSystem
+
+
+
+
 let emitters = [];
 let attractors = [];
 
 function setup() {
+ 
+
   createCanvas(1000, 1000);
   
   for (let i = 0; i < 20; i++) {
