@@ -81,7 +81,7 @@ function draw() {
   }
 
  
-  if (frameCount - Amountframe >= 1200) {
+  if (frameCount - Amountframe >= 120) {
     params.testAmount = random(params.testAmountMin, params.testAmountMax);
     Amountframe = frameCount;
   }
