@@ -1,22 +1,22 @@
 let tValue = 1;
 let tValueMin = 0;
 let tValueMax = 3000;
-let tValueStep = 1;
+let tValueStep = random(-10, 10);
 let tAmount = 1;
 let tAmountMin = 0;
 let tAmountMax = 10;
-let tAmountStep = 1;
+let tAmountStep = random(-1, 1);
 let gui;
 
 let params = {
   testValue : 1,
   testValueMin : 0,
   testValueMax : 3000,
-  testValueStep : 1,
+  testValueStep : random(-10, 10),
   testAmount : 1,
   testAmountMin : 0,
   testAmountMax : 10,
-  testAmountStep : 1,
+  testAmountStep : random(-1, 1),
   tColor : [200, 0, 0],
 }
 
