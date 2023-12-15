@@ -19,10 +19,17 @@ class Emitter {
     }
   }
 
-
-  applyCup(cup) {
+  applyRepeller(repeller) {
+    //{!4} Calculating a force for each Particle based on a Repeller
     for (let particle of this.particles) {
-      let force = cup.attract(particle);
+      let force = repeller.repel(particle);
+      particle.applyForce(force);
+    }
+  }
+  
+  applyAttractor(attractor) {
+    for (let particle of this.particles) {
+      let force = attractor.attract(particle);
       particle.applyForce(force);
     }
   }

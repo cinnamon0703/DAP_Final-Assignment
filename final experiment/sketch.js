@@ -6,10 +6,6 @@ let tAmount = 1;
 let tAmountMin = 0;
 let tAmountMax = 10;
 let tAmountStep = 1;
-let tSize = 100;
-let tSizeMin = 1;
-let tSizeMax = 500;
-let tSizeStep = 1;
 let gui;
 
 let params = {
@@ -22,42 +18,42 @@ let params = {
   testAmountMax : 10,
   testAmountStep : 1,
   tColor : [200, 0, 0],
-  size: 100,
-  sizeMin : 1,
-  sizeMax : 500,
-  sizeStep : 1,
 }
 
 let emitter;
 
-let cup;
+let repeller;
+let attractor;
 
 
 function setup() {
   createCanvas(2000, 1000);
   emitter = new Emitter(width / 2, 50);
-  cup = new Cup(width/2, 200);
+  repeller = new Repeller(width / 2, 150);
+  attractor = new Attractor(width/2, 200);
 
   gui = createGui('test slider');
 
   gui.addObject(params);
   gui.setPosition(310, 10);
+ 
+
 }
 
 function draw() {
   background(255);
 
-  
-  cup.setPower(params.testValue);
-  // cup.cupSize(params.size);   
+  attractor.setPower(params.testValue);
 
   for (let i = 0; i < params.testAmount; i++) {
     emitter.addParticle(params.tColor);
   }
   let gravity = createVector(0, 0.1);
   emitter.applyForce(gravity);
-  emitter.applyCup(cup);
+  emitter.applyRepeller(repeller);
+  emitter.applyAttractor(attractor);
   emitter.run();
 
-  cup.show();
+  repeller.show();
+  attractor.show();
 }
