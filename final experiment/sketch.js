@@ -19,8 +19,8 @@ let params = {
   testAmountStep: 1,
   tColor: [200, 0, 0],
   randomizeStep: function () {
-    this.testValueStep = random(0.1, 5);  // 원하는 범위로 조절
-    this.testAmountStep = random(0.1, 5);  // 원하는 범위로 조절
+    this.testValueStep = random(0.1, 5);  
+    this.testAmountStep = random(0.1, 5);  
   }
 }
 
@@ -39,7 +39,7 @@ function setup() {
   gui.addObject(params);
   gui.setPosition(310, 10);
 
-  // 슬라이더 값이 변경될 때마다 randomizeStep 함수 호출
+ 
   gui.addGlobals('testValue', 'testAmount', 'randomizeStep');
 }
 
