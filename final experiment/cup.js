@@ -2,27 +2,22 @@ class Cup {
   constructor(x, y) {
     this.position = createVector(x, y);
     this.power = 600;
-    this.size = 100;
   }
 
   setPower(value) {
     this.power = value;
   }
 
-  cupSize(value) {
-    this.size -= value;
-  }
-
   show() {
     stroke(0);
     strokeWeight(2);
-    fill(255, 0, 0);
+    fill(255);
 
-    // 변경된 부분: 컵 모양 그리기
+    // 변경된 부분: 컵 모양 그  리기
     beginShape();
-    vertex(this.position.x - this.size / 2, this.position.y);
-    bezierVertex(this.position.x - this.size / 2, this.position.y + this.size, this.position.x + this.size / 2, this.position.y + this.size, this.position.x + this.size / 2, this.position.y);
-    endShape(CLOSE);
+    vertex(this.position.x - 10, this.position.y - 5);
+    bezierVertex(this.position.x - 20, this.position.y + 40, this.position.x + 30, this.position.y + 40, this.position.x + 20, this.position.y - 5);
+    endShape(OPEN);
   }
 
   attract(particle) {

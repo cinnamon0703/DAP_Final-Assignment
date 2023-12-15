@@ -49,7 +49,7 @@ function draw() {
 
   
   cup.setPower(params.testValue);
-  cup.cupSize(params.size);   
+  // cup.cupSize(params.size);   
 
   for (let i = 0; i < params.testAmount; i++) {
     emitter.addParticle(params.tColor);
