@@ -22,4 +22,7 @@ class Attractor {
       return force;
     }
   }
-  
+  beginShape();
+    vertex(this.position.x - 10, this.position.y + 5);
+    bezierVertex(this.position.x - 10, this.position.y + 20, this.position.x + 10, this.position.y + 20, this.position.x + 10, this.position.y + 5);
+    endShape(CLOSE);
