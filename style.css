@@ -1,7 +1,15 @@
 html, body {
- margin: 0;
+ margin: 0px;
  padding: 0;
+ align-content: auto;
+ text-align: center;
+ color: rgb(255, 255, 255);
+ background-color: black;
+ font-size: 20px;
 }
 canvas {
   display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
